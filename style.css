@@ -1,6 +1,6 @@
 :root{
     --mainColor: rgb(134, 202, 202);
-    --fontColorGrey: ;
+    --fontColorSecond: rgb(153, 153, 153);
     --fontRegular: ;
     --fontBold: ;
 }
@@ -102,7 +102,6 @@ body,p,h1{
 }
 /* /// */
 /* SIDEBAR */
-
 .sidebar{
     display: grid;
     grid-template: 5rem 20rem 10rem / 100%;
@@ -112,7 +111,6 @@ body,p,h1{
     grid-area: 1 / 1 / 3 / 2;
     color: white;
 }
-
 .dashboard{
     display: flex;
     align-items: center;
@@ -139,16 +137,75 @@ body,p,h1{
     margin-left: 1rem;
 }
 /* /// */
-
-
-
-
-
-
-
-
-
+/* MAIN */
 .main{
-    background-color: rgb(255, 194, 194);
+    background-color: rgb(230, 241, 245);
     grid-area: 2 / 2 / 3 / 3;
+    display: grid;
+    padding: 2rem;
+    grid-template: 20rem auto / 3fr 1fr;
+    gap: 2rem;
+}
+.projects{
+    grid-area: 1 / 1 / 3 / 2;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+.card{
+    height: 200px;
+    background-color: white;
+}
+.annoucements{
+    display: flex;
+    flex-direction: column;
+}
+.annoucements_card{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 2rem;
+    height: 100%
+}
+.annouc_content{
+    display: flex;
+    height: calc(100% / 3);
+    flex-direction: column;
+}
+.annouc_content h1{
+    font-size: 1em;
+    margin: 0.2rem 0;
+}
+.annouc_content p{
+    font-size: 0.8em;
+    color: var(--fontColorSecond);
+}
+.annoucements_border{
+    margin: 1rem 0 ;
+    height: 1px;
+    background-color: black;
+}
+.trending{
+    display: flex;
+    flex-direction: column;
+}
+.trending_card{
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 1fr);
+    padding: 1rem;
+    background-color: white;
+}
+.trend{
+    gap: 1rem;
+    grid-template-columns: 3.5rem 3fr;
+    display: grid;
+}
+.trend_text{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
