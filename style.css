@@ -1,10 +1,23 @@
+@font-face {
+    font-family: Nunito-Bold;
+    src: url(font/Nunito-Bold.ttf);
+}
+@font-face{
+    font-family: Nunito-Regular;
+    src: url(font/Nunito-Regular.ttf);
+}
+@font-face{
+    font-family: Nunito-Light;
+    src: url(font/Nunito-Light.ttf);
+}
 :root{
     --mainColor: rgb(134, 202, 202);
     --fontColorSecond: rgb(153, 153, 153);
-    --fontRegular: ;
-    --fontBold: ;
+    --fontRegular: Nunito-Regular;
+    --fontBold: Nunito-Bold;
+    --fontLight: Nunito-Light;
 }
-body,p,h1{
+body,p,h1,h2,h3,h4{
     padding: 0;
     margin: 0;
 }
@@ -21,7 +34,6 @@ body,p,h1{
 /* HEADER */
 .header{
     grid-area: 1 / 2 / 2 / 3;
-
     display: grid;
     grid-template: 50% 50% / 6rem 2fr 12rem 1fr; 
 
@@ -44,6 +56,8 @@ body,p,h1{
 }
 .search_container input,
                   input:focus{
+    font-family: var(--fontRegular);
+    font-size: 1em;
     outline: none;
     padding: 0 1rem;
     width: 100%;
@@ -62,7 +76,8 @@ body,p,h1{
     margin-bottom: auto;
     gap: 2rem;
 }
-.profile_container p{ /* NEED FONT */
+.profile_container p{ 
+    font-family: var(--fontBold);
     font-size: 1.5em;
 }
 
@@ -81,6 +96,7 @@ body,p,h1{
 }
 /* --WELCOME-- */
 .welcome_message{
+    font-family: var(--fontRegular);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,6 +112,8 @@ body,p,h1{
     align-items: center;
 }
 .profile_buttons button{
+    font-family: var(--fontBold);
+    font-size: 1.1em;
     width: 7rem;
     height: 3rem;
     border-radius: 3.5rem;
@@ -115,6 +133,8 @@ body,p,h1{
     color: white;
 }
 .dashboard{
+    font-size: 2.5em;
+    font-family: var(--fontBold);
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -123,7 +143,7 @@ body,p,h1{
     width: 64px;
     height: 64px;
 }
-.nav_top{
+.nav_top{   
     display: grid;
     grid-template: repeat(6, 1fr) / 100%;
     width: 100%;
@@ -134,6 +154,8 @@ body,p,h1{
     width: 100%;
 }
 .nav_option{
+    font-size: 1.2em;
+    font-family: var(--fontRegular);
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -168,6 +190,12 @@ body,p,h1{
     height: 200px;
     background-color: white;
 }
+.card h3{
+    font-family: var(--fontBold);
+}
+.card p{
+    font-family: var(--fontRegular);
+}
 .card img{
     width: 24px;
     height: 24px;
@@ -196,10 +224,12 @@ body,p,h1{
     flex-direction: column;
 }
 .annouc_content h1{
+    font-family: var(--fontBold);
     font-size: 1em;
     margin: 0.2rem 0;
 }
 .annouc_content p{
+    font-family: var(--fontRegular);
     font-size: 0.8em;
     color: var(--fontColorSecond);
 }
@@ -229,4 +259,10 @@ body,p,h1{
     justify-content: center;
     display: flex;
     flex-direction: column;
+}
+.trend_text h4{
+    font-family: var(--fontBold);
+}
+.trend_text p{
+    font-family: var(--fontRegular);
 }
