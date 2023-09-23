@@ -39,6 +39,9 @@ body,p,h1{
     width: 29px;
     height: 29px;
 }
+.icon_invert{
+    filter: invert(1);
+}
 .search_container input,
                   input:focus{
     outline: none;
